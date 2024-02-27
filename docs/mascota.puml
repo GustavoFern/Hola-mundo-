@@ -1,0 +1,53 @@
+@startuml mascota
+
+class Animal
+class Mascota{
+    -salud : int
+    +Comer()
+    +Jugar()
+}
+package Juguete{
+    class Pelota
+    class Peluche
+}
+class Alimento
+class Salud
+class Juguete
+class Emocion
+class Ropa
+class Color
+class Cama
+class Dueño
+class Estadistica
+class Mueble
+class Plato
+class Hambre
+class Sueño
+class Energia
+class Higiene
+
+Mascota --|> Animal
+Alimento "*" --o "1" Mascota
+Mascota "1" *- "1" Estadistica
+Alimento --|> Salud
+Juguete --o Mascota
+Mascota "1" *- "1" Emocion
+Pelota --|> Juguete
+Peluche --|> Juguete
+Ropa "1,*" --o  "1" Mascota
+Ropa "1" *- "1,*" Color
+Pelota "1" *- "1,*" Color
+Peluche "1" *- "1,*" Color
+Ropa "1,*" --o "1" Peluche
+Mueble "1" --o "1" Mascota
+Mascota "1" *- "1" Dueño
+Salud --|> Estadistica
+Cama --|> Mueble
+Plato "1" --o "1" Mascota
+Alimento "1,*" --o "1" Plato
+Hambre --|> Estadistica
+Sueño --|> Estadistica
+Higiene --|> Estadistica
+Energia --|> Estadistica
+
+@enduml 
