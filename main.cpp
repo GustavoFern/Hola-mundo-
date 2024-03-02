@@ -3,9 +3,16 @@
 using namespace std;
 
 #include <Mascota.hpp>
+#include <Dibujo.hpp>
 
 int main(int argc, char const *argv[])
 {
+    Dibujo dibujo1("./assets/mimi.txt");
+    dibujo1.Dibujar();
+    cout << endl;
+    Dibujo dibujo2("./assets/JM.txt");
+    dibujo2.Dibujar();
+
     Mascota m1;
     Mascota m2;
     Mascota m3;
